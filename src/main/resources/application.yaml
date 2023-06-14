@@ -14,12 +14,12 @@ spring:
     check-location: false
     baselineOnMigrate: true
   datasource:
-    url: 'jdbc:h2:file:./target/database/h2'
-    #url: jdbc:h2:mem:test_mem
-    username: sa
-    password: null
-    driverClassName: org.h2.Driver
-    max-active: 15
+    # url: 'jdbc:h2:file:./target/database/h2'
+    url: jdbc:postgresql://hdai-dev-test-fhir-cluster.cluster-c1lziywrqhx4.us-east-1.rds.amazonaws.com:5432/hapi_dstu3
+    username: admin
+    password: admin
+    driverClassName: org.postgresql.Driver
+    max-active: 1
 
     # database connection pool size
     hikari:
